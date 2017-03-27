@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+      <h2>Search</h2>
+      <div id="custom-search-input">
+        <div class="input-group col-md-12">
+          <input #search (keyup)="0" type="text" class="search-query form-control" placeholder="Search" />
+          <span class="input-group-btn">
+            <button class="btn btn-danger" type="button">
+              <span class=" glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+	</div>
+
+  <div class="row">
+    <div *ngFor="let techItem of techList | techFilter: search.value">
+      <div class="well">
+        <div class="media">
+          <div class="media-left media-middle">
+            <img class="media-object img-thumbnail" src="/assets/images/tech/{{ techItem.imageUrl }}" width="100px" height="100px" alt="">
+          </div>
+          <div class="media-body">
+            <h2>{{techItem.title}}</h2>
+            <p>{{techItem.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>  
+</div>
+</div>

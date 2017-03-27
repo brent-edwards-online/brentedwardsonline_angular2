@@ -1,0 +1,26 @@
+[
+      {
+        "techID": 0,
+        "imageUrl" : "angular2-logo.svg",
+        "title": "Angular2",
+        "description": "This site is an Angular2 SPA using components, services and routing. This page accesses its content via a service"
+      },
+      {
+        "techID": 2,
+        "imageUrl" : "bootstrap-logo.svg",
+        "title": "Bootstrap3",
+        "description": "string"    
+      },
+      {
+        "techID": 3,
+        "imageUrl" : "aws-logo.jpg",
+        "title": "Hosted in AWS",
+        "description": "This site is hosted in AWS using Elastic Beanstalk"    
+      },
+      {
+        "techID": 1,
+        "imageUrl" : "apache-logo.jpg",
+        "title": "Apache",
+        "description": "My site is powered by an Apache"
+      }
+]

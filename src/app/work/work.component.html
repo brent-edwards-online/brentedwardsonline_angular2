@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+      <h2>Search</h2>
+      <div id="custom-search-input">
+        <div class="input-group col-md-12">
+          <input #search (keyup)="0" type="text" class="search-query form-control" placeholder="Search" />
+          <span class="input-group-btn">
+            <button class="btn btn-danger" type="button">
+              <span class=" glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+	  </div>
+
+    <div class="row">
+      <div *ngFor="let job of jobList  | workFilter: search.value">
+        <div class="well">  
+
+          <div class="media">
+            <div class="media-left media-middle">
+              <a href="http://{{job.website}}">
+                <img class="media-object img-thumbnail" src="/assets/images/work/{{ job.imageUrl }}" width="100px" height="100px" alt="{{job.companyname}}">
+              </a>
+            </div>
+            <div class="media-body">
+              <h2>{{job.companyName}}</h2>
+              <a href="http://{{job.website}}">{{job.website}}</a>
+              <p>{{job.about}}</p>            
+            </div>
+          </div>
+
+          <div class="work-detail">
+            <h5>Role:</h5>
+            <ul>
+                <li>{{job.role}}: <em>{{job.period}}</em></li> 
+            </ul>
+            <h5>Summary:</h5>
+            <ul>
+            <div *ngFor="let desc of job.summary">
+                <li>{{desc}}</li> 
+            </div>
+            </ul>
+            <h5>Skillset:</h5>
+            <ul>
+                <li>{{job.skillset}}</li> 
+            </ul>
+          </div>
+
+        </div>  
+      </div>
+    </div>  
+</div>

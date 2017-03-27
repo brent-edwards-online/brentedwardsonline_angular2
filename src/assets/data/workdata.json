@@ -1,0 +1,220 @@
+[
+      {
+        "workID": 0,
+        "imageUrl" : "goodlife-logo.jpg",
+        "companyName": "Goodlife Health Clubs" ,
+        "about": "Goodlife Health Clubs have 77 clubs across Australia and are part of the Fitness Lifestyles Group including Fitness First and Jetts",
+        "website": "www.goodlifehealthclubs.com.au",
+        "period": "Jun 2016 - Mar 2017",
+        "type": "IT",
+        "role": "Software Development Lead",
+        "summary": [
+          "Software lead for 3 development teams working in an Agile framework",
+          "Development of web applications using C#, MVC and SQL Server with Entity Framework",
+          "Implemented and documented development processes including coding standards, branching strategy and management of JIRA and Confluence projects and boards",
+          "Release planning, management and deployment of applications, requirements gathering and user story creation",
+          "Analysis and selection of software development tools and frameworks e.g. Angular2, Xamarin"
+        ],
+        "description": [
+          
+        ],
+        "skillset": "C#, MVC, Web API, HTML, Bootstrap, Entity Framework, SQL Server, GIT, Team City, Bamboo, Octopus Deploy, Scrum, Agile, JIRA, Confluence"
+      },
+      {
+        "workID": 1,
+        "imageUrl" : "serato-logo.jpg",
+        "companyName": "Serato" ,
+        "about": "Used by millions of DJs worldwide. From the unknown to the greatest.",
+        "website": "www.serato.com",
+        "period": "Mar 2014 - Jun 2016",
+        "type": "IT",
+        "role": "Software Development Technical Lead",
+        "summary": [
+          "Software engineer leading a Scrum team in an Agile development environment",
+          "Development of C++ modules for a real-time audio application",
+          "Subscriptions - Implemented a phone home function via http in the front end application to determine the license state of the user as part of the subscriptions project. Allowed users to pay a monthly subscription for their software license instead of an upfront payment",
+          "Midi Remapping - Allowed users to be able to customize the midi mapping functionality of their Serato controller",
+          "Numark NV - Developed the first DJ controller with integrated screens https://www.numark.com/microsites/nv/",
+          "Translations - Implemented the ability of the UI to display alternate languages including Spanish, Portuguese, Japanese, Chinese, German and French. Also developed a key checking system to search for new text requiring to be translated before the next release"
+        ],
+        "description": [
+        ],
+        "skillset": "C++, Perforce, Jenkins, Scrum, Agile, JIRA, Confluence, Real-Time, Audio, MIDI, Multi-Thread"
+      },
+      {
+        "workID": 2,
+        "imageUrl" : "abtrac-logo.jpg",
+        "companyName": "Abtrac",
+        "about": "Time, cost and invoicing for professional services",
+        "website": "www.abtrac.com",
+        "period": "Oct 2013 - Mar 2014",
+        "type": "IT",
+        "role": "Software Engineer",
+        "summary": [
+          "Development of modules for Abtrac, an MS Access based time, cost and reporting application",
+          "Added enhanced password security to system, password expiry and password strength",
+          "Developed a module to send SMS text messages from Abtrac using Vodafone's MultiTXT web api",
+          "Porting of Abtrac to Micorsoft MVC application running under an Azure framework",
+          "Developed a set of C# coding standards and introduced unit testing",
+          "Developed an invoicing module to upload invoices to the Cloud based MYOB framework"
+        ],
+        "description": [
+          
+        ],
+        "skillset": "C#,  Microsoft MVC, Entity Framework, SQL Server, VBA, MS Access, OAuth2, MYOBapi V2"
+      },
+      {
+        "workID": 3,
+        "imageUrl" : "uoa-logo.jpg",
+        "companyName": "The University of Auckland Recreation Centre",
+        "about": "The University of Auckland's hub for all things Sport and Recreation on campus",
+        "website": "www.universitysport.auckland.ac.nz",
+        "period": "Mar 2008 - Oct 2013",
+        "type": "FitnessIT",
+        "role": "Group Fitness Coordinator, Marketing Coordinator, Software Developer",
+        "summary": [
+          "2013 NZ Fitness Industry Award Winner, Group Exercise",
+          "2012 NZ Fitness Industry Award Finalist, Group Exercise",
+          "2011 NZ Fitness Industry Award Winner, Group Exercise",
+          "Managed Group Fitness program with up to 50 classes during semester period",
+          "Increased Group Fitness average from 18 to 32, (77% increase)",
+          "Built UoA Store Manager, an application used to download sales via Rest Api from BigCommerce store, import into the CRM system and to reconcile payments for clients on automatic payment memberships",
+          "Developed Health and Fitness manager for administering fitness appointments and for automatic reminders via email for fitness program updates",
+          "Created Group Fitness manager application for recording group fitness statistics, reporting and payroll"
+          
+        ],
+        "description": [
+          
+        ],
+        "skillset": "VBA, Api, BigCommerce, MySQL, SQL Server"
+      },
+      {
+        "workID": 4,
+        "imageUrl" : "acg-logo.jpg",
+        "companyName": "Academic Colleges Group (ACG)",
+        "about": "New Zealand's largest private educational provider",
+        "website": "www.acgedu.com",
+        "period": "Jan 2008 - Aug 2008",
+        "type": "Fitness",
+        "role": "Senior Fitness instructor",
+        "summary": [
+          "Fitness supervisor for the ACG Senior College Fitness Center",
+          "Designed and delivered year 11 student fitness program",
+          "Performed fitness assessments and developed fitness programs for both students and staff"
+        ],
+        "description": [
+          
+        ],
+        "skillset": "Fitness assessments and programs, Group Exercise"
+      },
+      {
+        "workID": 5,
+        "imageUrl" : "abtrac-logo.jpg",
+        "companyName": "Abtrac",
+        "about": "Time, cost and invoicing for professional services",
+        "website": "www.abtrac.com",
+        "period": "2005 - 2007",
+        "type": "IT",
+        "role": "Software Engineer",
+        "summary": [
+          "Development of MS Access database applications including data entry forms, analysis functions and analysis reports",
+          "Maintained and supported the main product Abtrac, a time, cost and invoicing system with debtor management. This involved design of the data model, building data entry interfaces and designing reports",
+          "With only a few developers I was involved in all aspects of client projects. This included meeting with clients to discuss and document requirements, quoting for work and developing the software solution. I also deployed the systems and provided training and ongoing support via email or trouble shooting over the phone"
+        ],
+        "description": [
+
+        ],
+        "skillset": "VBA, MS Access, SQL Server, VB6, C#, Oracle"
+      },
+      {
+        "workID": 6,
+        "imageUrl" : "ymca-logo.jpg",
+        "companyName": "YMCA of Auckland",
+        "about": "YMCA Auckland is here for your community offering fitness, swimming, recreation, childcare, accommodation, sports & camps.",
+        "website": "www.nzymca.com",
+        "period": "Feb 2002 - May 2003",
+        "type": "Fitness",
+        "role": "Administration Manager",
+        "summary": [
+          "Management and administration of the customer service department and reception",
+          "Built an MS Access application to manage enrolments into childrens' holiday programs",
+          "Managed social indoor soccer mixed competition",
+          "Group fitness and fitness instructor delivering fitness assessments and personalised programs"
+        ],
+        "description": [
+          
+        ],
+        "skillset": "MS Access, VBA, Administration"
+      },
+      {
+        "workID": 7,
+        "imageUrl" : "nortel-logo.jpg",
+        "companyName": "Nortel Networks - London",
+        "about": "Member of a team developing a telephone fraud detection system",
+        "website": "www.nortel-canada.com",
+        "period": "May 2000 - Sep 2001",
+        "type": "IT",
+        "role": "Software Engineer",
+        "summary": [
+          "Development of customer modules to normalise telephone call records into a proprietry format for anlaysis in the main fraud detection application"    
+        ],
+        "description": [
+          "Development of customer modules to normalise telephone call records into a proprietry format for anlaysis in the main fraud detection application"      
+        ],
+        "skillset": "C++, Clearcase, Telecommunications"
+      },
+      {
+        "workID": 8,
+        "imageUrl" : "nec-logo.jpg",
+        "companyName": "NEC Networks",
+        "about": "One of the world's leading providers of Internet, broadband networking and enterprise business solutions.",
+        "website": "www.nz.nec.com",
+        "period": "Feb 2000 – Mar 2000",
+        "type": "IT",
+        "role": "Telephone Exchange Installation Engineer",
+        "summary": [
+          "Installation and upgrades to the New Zealand telephone exchange system"
+        ],
+        "description": [
+          
+        ],
+        "skillset": "Engineering, general workshop duties, cable running and termination"
+      },
+      {
+        "workID": 9,
+        "imageUrl" : "fp-logo.jpg",
+        "companyName": "Fisher and Paykel",
+        "about": "Development of a real-time embedded industrial automated controller for use on production lines",
+        "website": "www.fisherpaykel.com",
+        "period": "Sep 1998 – Feb 2000",
+        "type": "IT",
+        "role": "Software Engineer",
+        "summary": [
+          "Developed an application for upgrading user programs into the new language using Plex and Yacc",
+          "Implemented the ability to use the proprietary PSCLan communications card with the new Grasp software",
+          "Added the ability to dial into and manage the controller via a modem and PSTN line"
+        ],
+        "description": [
+        ],
+        "skillset": "C++, Delphi, Windows, Real-Time Embedded, Communications, Modem and TAPI"
+      },
+      {
+        "workID": 10,
+        "imageUrl" : "nec-logo.jpg",
+        "companyName": "NZTSSC (NEC)",
+        "about": "New Zealand Telecommunications Systems Support Centre. Installing and maintaining New Zealand's telephone exchange system",
+        "website": "www.nz.nec.com",
+        "period": "Mar 1996 - Sep 1998",
+        "type": "IT",
+        "role": "Project administration and  software engineer",
+        "summary": [
+          "Controlled information flow between our Wellington office, Telecom and Nec, and our project managers",
+          "Developed systems and MS Access databases to manipulate and validate large quantities of telephone subscriber data",
+          "Developed a Visual C++ application to extract telephone numbers from a system dump and to reset the message waiting indicator for the telephone subscribers using a laptop modem"
+        ],
+        "description": [
+          
+        ],
+        "skillset": "VBA, MS Access, UNIX, NAWK, Bash, C++"
+      }
+]

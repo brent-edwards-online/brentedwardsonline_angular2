@@ -1,0 +1,16 @@
+h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.work-detail {
+  margin-top: 10px;
+}
+
+em {
+  font-weight: bold;
+}
+
+#custom-search-input {
+  padding-bottom: 10px;
+}

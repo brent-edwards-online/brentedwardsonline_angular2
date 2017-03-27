@@ -1,0 +1,9 @@
+#home-jumbotron {
+    margin-bottom: 0px;
+    background-image: url(/assets/images/carousel-gf-03.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 800px;
+}

@@ -1,0 +1,212 @@
+<nav id="navigation" class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="home">Brent Edwards Online</a>
+    </div>
+    <div id="navbar3" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="tech">Tech</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="fitness">Fitness</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="work">Work History</a></li>
+      </ul>
+
+      <form [class.hidden]="model.isSignedIn" class="navbar-form navbar-right">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#signInModal">Sign In</button>
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#registerModal">Register</button>
+      </form>
+      <form [class.hidden]="!model.isSignedIn" class="navbar-form navbar-right">
+        <p style="display:inline-block;margin-right:20px;"><em>Hi {{ model.currentUser }}</em></p>
+        <button type="button" class="btn btn-default" (click)="signOut()">Logout</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- ********** Sign In Modal ********** -->
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <form name="formSignIn" (ngSubmit)="f.form.valid && signin()" #f="ngForm" novalidate>
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Sign In To BrentEdwardsOnline</h4>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">    
+            <div class="form-group">
+              <label for="signInEmail" class="control-label">E-Mail</label>  
+              <div class="inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input placeholder="email" type="text" (keyup)="errorMessage = ''"
+                               name="username" [(ngModel)]="model.username" #username="ngModel" 
+                               pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                               class="form-control" >
+                </div>
+              </div>
+              <div *ngIf="username.errors && (username.dirty || username.touched)" class="alert alert-danger" style="margin-top:5px;">
+                <div [hidden]="!username.errors.required">Email is required</div>
+                <div [hidden]="!username.errors.pattern">Email format is incorrect</div>
+              </div>
+            </div>
+            
+            
+            <div class="form-group">
+              <label for="siqnInPassword" class="control-label">Password</label>  
+              <div class="inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input placeholder="password" type="password" (keyup)="errorMessage = ''"
+                               name="password" [(ngModel)]="model.password" #password="ngModel" required minlength="5" class="form-control" >
+                </div>
+              </div>
+              
+              <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger" style="margin-top:5px;">
+                <div [hidden]="!password.errors.required">Password is required</div>
+                <div [hidden]="!password.errors.minlength">Minumum length is 5 characters</div>
+              </div>
+            </div>
+          <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </div>  
+</div>
+<!-- ********** End Sign In Modal ********** -->
+
+<!-- ********** Register Modal ********** -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <form name="formRegister" (ngSubmit)="fr.form.valid && registerUser()" #fr="ngForm" novalidate>
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                  </button>
+          <h4 class="modal-title" id="myModalLabel">
+            Register For BrentEdwardsOnline
+          </h4>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <div class="inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input placeholder="first name" type="text" (keyup)="registerErrorMessage = ''"
+                               name="firstname" [(ngModel)]="model.firstname" #firstname="ngModel" required class="form-control" >
+                </div>
+              </div>
+              <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)" class="alert alert-danger" style="margin-top:5px;">
+                <div [hidden]="!firstname.errors.required">First name is required</div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="firstName">Last Name</label>
+              <div class="inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input placeholder="last name" type="text" (keyup)="registerErrorMessage = ''"
+                         name="lastname" [(ngModel)]="model.lastname" #lastname="ngModel" required class="form-control" >
+                </div>
+              </div>
+              <div *ngIf="lastname.errors && (lastname.dirty || lastname.touched)" class="alert alert-danger" style="margin-top:5px;">
+                <div [hidden]="!lastname.errors.required">Last name is required</div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="registerEmail">Email</label>
+              <div class="inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input placeholder="email" type="text" (keyup)="registerErrorMessage = ''"
+                         name="registerEmail" [(ngModel)]="model.registerEmail" #registerEmail="ngModel" 
+                         pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                         required class="form-control" >
+                </div>
+              </div>
+              <div *ngIf="registerEmail.errors && (registerEmail.dirty || registerEmail.touched)" class="alert alert-danger" style="margin-top:5px;">
+                <div [hidden]="!registerEmail.errors.required">Email is required</div>
+                <div [hidden]="!registerEmail.errors.pattern">Email format is incorrect</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="registerPassword" class="control-label">Password</label>  
+              <div class="inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input placeholder="password" type="password" (keyup)="registerErrorMessage = ''"
+                         name="registerPassword" [(ngModel)]="model.registerPassword" #registerPassword="ngModel" 
+                         required minlength="5" 
+                         class="form-control" >
+                </div>
+              </div>
+
+              <div *ngIf="registerPassword.errors && (registerPassword.dirty || registerPassword.touched)" class="alert alert-danger" style="margin-top:5px;">
+                <div [hidden]="!registerPassword.errors.required">Password is required</div>
+                <div [hidden]="!registerPassword.errors.minlength">Minumum length is 5 characters</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword" class="control-label">Password</label>  
+              <div class="inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input placeholder="confirm password" type="password" (keyup)="registerErrorMessage = ''"
+                         name="confirmPassword" [(ngModel)]="model.confirmPassword" #confirmPassword="ngModel" 
+                         required minlength="5" 
+                         validateEqualTo="registerPassword"
+                         class="form-control" >
+                </div>
+              </div>
+
+              <div *ngIf="confirmPassword.errors && (confirmPassword.dirty || confirmPassword.touched)" class="alert alert-danger" style="margin-top:5px;">
+                <div [hidden]="!confirmPassword.errors.required">Password is required</div>
+                <div [hidden]="!confirmPassword.errors.minlength">Minumum length is 5 characters</div>
+                <div [hidden]="confirmPassword.errors?.validateEqualTo">Passwords do not match</div>
+              </div>
+            </div>
+
+            <div *ngIf="registerErrorMessage" class="alert alert-danger">{{ registerErrorMessage }}</div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- ********** End Register Modal ********** -->
