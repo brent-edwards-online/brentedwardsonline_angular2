@@ -32,14 +32,20 @@ export class Signin {
         this.router.navigate(['home']);
     }
 
+    signInAsGuest(): void {
+        this.model.username = "guest@brentedwardsonline.com";
+        this.model.password = "Gu3st2@17"
+        this.signin();
+    }
+
     signin(): void {
         this.authenticationService.signin(this.model.username, this.model.password)
             .subscribe(
             () => {
-
                 this.model.isSignedIn = true;
-
                 $('#signInModal').modal('hide');
+                this.model.username = "";
+                this.model.password = ""
             },
             (error: any) => {
                 this.model.isSignedIn = false;
