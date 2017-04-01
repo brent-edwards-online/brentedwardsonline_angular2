@@ -15,6 +15,10 @@
         <li class="nav-item"><a class="nav-link" routerLink="tech">Tech</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="fitness">Fitness</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="work">Work History</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="qualifications">Qualifications</a></li>
+        <!--
+        <li class="nav-item"><a class="nav-link" routerLink="blog">Blog</a></li>
+        -->
       </ul>
 
       <form [class.hidden]="model.isSignedIn" class="navbar-form navbar-right">
@@ -33,30 +37,25 @@
 <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-
-      
-
       <form name="formSignIn" (ngSubmit)="f.form.valid && signin()" #f="ngForm" novalidate>
-
         <!-- Modal Header -->
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">
             <span aria-hidden="true">&times;</span>
             <span class="sr-only">Close</span>
           </button>
-          <h4 class="modal-title" id="myModalLabel">Sign In To BrentEdwardsOnline</h4>
+          <h4 class="modal-title" id="myModalLabel">Sign In To Brent Edwards Online</h4>
         </div>
 
         <!-- Modal Body -->
         <div class="modal-body">    
+          
+          <app-loader [hidden]="!this.model.isloading"></app-loader>
 
-          <!--
-          <div class="alert alert-info">
-            To login as a guest use:<br>
-            Email: guest@brentedwardsonline.com<br>
-            Passwod: Gu3st2@17<br> 
-          </div>
-          -->
+          <div *ngIf="model.registerSuccess" class="alert alert-success" style="margin-top:5px;">
+              <div>Hi {{model.registeredFirstname}}, you registered successfully. You can now sign in.</div>
+          </div>    
+        
             <div class="form-group">
               <label for="signInEmail" class="control-label">E-Mail</label>  
               <div class="inputGroupContainer">
@@ -110,7 +109,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
 
-      <form name="formRegister" (ngSubmit)="fr.form.valid && registerUser()" #fr="ngForm" novalidate>
+      <form name="formRegister" (ngSubmit)="fr.form.valid && registeruser()" #fr="ngForm" novalidate>
 
         <!-- Modal Header -->
         <div class="modal-header">
@@ -119,12 +118,15 @@
                         <span class="sr-only">Close</span>
                   </button>
           <h4 class="modal-title" id="myModalLabel">
-            Register For BrentEdwardsOnline
+            Register For Brent Edwards Online
           </h4>
         </div>
 
         <!-- Modal Body -->
         <div class="modal-body">
+          
+          <app-loader [hidden]="!this.model.isloading"></app-loader>
+
             <div class="form-group">
               <label for="firstName">First Name</label>
               <div class="inputGroupContainer">
@@ -208,7 +210,11 @@
               </div>
             </div>
 
-            <div *ngIf="registerErrorMessage" class="alert alert-danger">{{ registerErrorMessage }}</div>
+            <div *ngIf="registerErrors.length > 0" class="alert alert-danger">
+              <div *ngFor="let error of registerErrors">
+                {{ error }}
+              </div>
+            </div>
         </div>
 
         <!-- Modal Footer -->

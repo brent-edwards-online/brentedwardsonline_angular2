@@ -7,3 +7,27 @@
     color: white;
     min-height: 800px;
 }
+
+/*
+.main_body {
+    background-image: url(/assets/images/carousel-gf-03.jpg);
+    background:url(/assets/images/carousel-gf-03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*/
+
+#intro_section {
+ margin-top:2%;
+ margin-left:0px;
+ margin-right:0px;
+}
+
+
+#card_section{
+ margin-top:2%;
+}
+
+
+
+

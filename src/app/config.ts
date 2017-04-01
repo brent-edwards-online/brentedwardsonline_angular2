@@ -7,8 +7,12 @@ export class Config {
      * @see https://identityserver4.readthedocs.io/en/dev/endpoints/token.html
      */
     public static readonly AUTHORIZATION_URL: string = "https://lb.brentedwardsonline.com";
+
+    //public static readonly AUTHORIZATION_URL: string = "http://localhost:5000";
     
     public static readonly TOKEN_ENDPOINT: string = "/connect/token";
+
+    public static readonly REGISTER_ENDPOINT: string = "/account/register";
 
     public static readonly REVOCATION_ENDPOINT: string = "/connect/revocation";
 

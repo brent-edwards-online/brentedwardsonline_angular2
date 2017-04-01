@@ -14,15 +14,17 @@
 	</div>
 
   <div class="row">
-    <div *ngFor="let techItem of techList | techFilter: search.value">
+    <div *ngFor="let qual of qualificationList">
       <div class="well">
         <div class="media">
           <div class="media-left media-middle">
-            <img class="media-object img-thumbnail" src="/assets/images/tech/{{ techItem.imageUrl }}" width="100px" height="100px" alt="">
+            <img class="media-object img-thumbnail" src="/assets/images/qualifications/{{ qual.provider.qualificationProviderImageUrl }}" width="100px" height="100px" alt="">
           </div>
           <div class="media-body">
-            <h2>{{techItem.title}}</h2>
-            <p>{{techItem.description}}</p>
+            <h2>{{ qual.name }}</h2>
+            <h3>{{ qual.provider.qualificationProviderName }}</h3>
+            <a href="{{ qual.provider.qualificationProviderName }}">{{ qual.provider.qualificationProviderName }}</a>
+            <p>{{ qual.description }}</p>
           </div>
         </div>
       </div>

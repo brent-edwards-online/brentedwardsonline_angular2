@@ -58,8 +58,30 @@ import { Config } from '../config';
         this.options = new RequestOptions({ headers: this.headers });
     }
 
-    public registeruser(firstname: string, lastname:string, username: string, password: string) {
+    public registeruser(firstname: string, lastname:string, username: string, password: string, confirmPassword: string): Observable<any> {
+        let registerEndpoint: string = Config.REGISTER_ENDPOINT;
+        let baseURL: string = Config.AUTHORIZATION_URL;
 
+        let params: any = {
+            Firstname: firstname,
+            Lastname: lastname,
+            Email: username,
+            Password: password,
+            Confirmpassword: confirmPassword,
+            returnUrl: "/api"
+        };
+
+        let body: string = this.encodeParams(params);
+
+        this.authTime = new Date().valueOf();
+
+        return this.http.post(baseURL + registerEndpoint, body, this.options)
+            .map((res: Response) => {
+                let body: any = res.json();
+                console.log("Post Success");
+            }).catch((error: any) => {
+                return Observable.throw(error);
+            });
     }
 
     public signin(username: string, password: string): Observable<any> {

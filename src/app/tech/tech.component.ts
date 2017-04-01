@@ -7,7 +7,7 @@ import { TechFilterPipe } from '../pipes/techfilter.pipe';
   selector: 'app-tech',
   templateUrl: './tech.component.html',
   styleUrls: ['./tech.component.css'],
-  providers: [TechService],
+  providers: [TechService]
 })
 export class TechComponent implements OnInit {
   public techList;

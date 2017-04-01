@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../service/authentication.service';
-import { Signin } from '../service/signin';
+import { Signin } from '../service/signin.service';
 
 declare var $:any; // For JQuery
 

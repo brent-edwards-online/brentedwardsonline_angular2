@@ -30,6 +30,10 @@ import { LocalStorage } from "angular2-localstorage/WebStorage";
 import { AuthenticationRouteGuard } from './routeguards/authentication.routeguard'
 
 import {ToasterModule, ToasterService} from 'angular2-toaster';
+import { LoaderComponent } from './loader/loader.component';
+import { BlogComponent } from './blog/blog.component';
+import { QualificationsComponent } from './qualifications/qualifications.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 // Set tokenGetter to use the same storage in AuthenticationService.Helpers.
 export function getAuthHttp(http: Http) {
@@ -52,6 +56,10 @@ export function getAuthHttp(http: Http) {
     WorkComponent,
     TechFilterPipe,
     WorkFilterPipe,
+    LoaderComponent,
+    BlogComponent,
+    QualificationsComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
