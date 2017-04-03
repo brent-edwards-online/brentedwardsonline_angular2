@@ -1,0 +1,93 @@
+.image {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.about {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.thumbnail:hover .overlay {
+  opacity: 0.3;
+}
+
+.thumbnail:hover .about {
+  opacity: 1;
+}
+
+.about:hover{
+  cursor: pointer;
+}
+
+.text {
+  font-size: 16px;
+  padding: 10px 32px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+.text_white {
+  color: white;
+}
+
+.text_black {
+  color: black;
+}
+
+
+.basic {
+  background: #D9E251;
+  color: black;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #000;
+}
+
+.toning {
+  background: #6C217E;
+  color: white;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #000;
+}
+
+.sentao {
+  background: #9D0059;
+  color: white;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #000;
+}
+
+.gold {
+  background: #F7991F;
+  color: white;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #000;
+}
+
+.aqua {
+  background: #00A2B1;
+  color: white;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #000;
+}

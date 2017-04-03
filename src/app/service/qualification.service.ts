@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
+import { Config } from '../config';
+import { AuthHttp } from 'angular2-jwt';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class QualificationService {
 
-  constructor(private http: Http) { }
+  constructor(private authHttp: AuthHttp) { }
 
   getAll(){
-    return this.http.get('https://lb.brentedwardsonline.com/api/qualification').map((res:Response) => res.json());
-    //return this.http.get('http://localhost:5000/api/qualification').map((res:Response) => res.json());
+    let endPoint: string = Config.AUTHORIZATION_URL;
+    return this.authHttp.get( endPoint + '/api/qualification').map((res:Response) => res.json());
   }
 
 }

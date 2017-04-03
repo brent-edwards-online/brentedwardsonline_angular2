@@ -18,8 +18,7 @@ export const router: Routes = [
     { path: 'fitness', component: FitnessComponent, canActivate: [AuthenticationRouteGuard] },
     { path: 'tech', component: TechComponent, canActivate: [AuthenticationRouteGuard] },
     { path: 'work', component: WorkComponent, canActivate: [AuthenticationRouteGuard] },
-    { path: 'qualifications', component: QualificationsComponent, canActivate: [AuthenticationRouteGuard] },
-    { path: 'blog', component: BlogComponent, canActivate: [AuthenticationRouteGuard] }
+    { path: 'qualifications', component: QualificationsComponent, canActivate: [AuthenticationRouteGuard] }
 ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);
