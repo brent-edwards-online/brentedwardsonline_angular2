@@ -29,5 +29,21 @@
 }
 
 
+#confusion {
+    background: #7986CB;
+    border-radius: 5px;
+    padding:5px;
+    border: solid #000 3px;
+    color: #000;
+    margin: 5px;
+}
 
+#rate-my-image {
+    background: #000;
+    border-radius: 5px;
+    padding:5px;
+    border: solid grey 3px;
+    color: #85C2C2;
+    margin: 5px;
+}
 
