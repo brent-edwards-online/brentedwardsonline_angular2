@@ -30,7 +30,7 @@
 
 
 #confusion {
-    background: #7986CB;
+    background: rgba(121,134,203,1);
     border-radius: 5px;
     padding:5px;
     border: solid #000 3px;
@@ -39,7 +39,7 @@
 }
 
 #rate-my-image {
-    background: #000;
+    background: rgba(0,0,0,0.8);
     border-radius: 5px;
     padding:5px;
     border: solid grey 3px;
@@ -47,3 +47,16 @@
     margin: 5px;
 }
 
+#photo-uploader {
+    background: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    padding:5px;
+    border: solid #2ce02c 3px;
+    color: #2ce02c;
+}
+
+.well {
+    background-color: rgba(0,0,0,0.8);
+    background-image: none; 
+    color:white;
+}
