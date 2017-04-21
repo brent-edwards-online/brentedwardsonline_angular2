@@ -1,22 +1,3 @@
-#home-jumbotron {
-    margin-bottom: 0px;
-    background-image: url(/assets/images/carousel-gf-03.jpg);
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    min-height: 800px;
-}
-
-/*
-.main_body {
-    background-image: url(/assets/images/carousel-gf-03.jpg);
-    background:url(/assets/images/carousel-gf-03.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-*/
-
 #intro_section {
  margin-top:2%;
  margin-left:0px;
@@ -33,30 +14,34 @@
     background: rgba(121,134,203,1);
     border-radius: 5px;
     padding:5px;
-    border: solid #000 3px;
+    border: solid #000 1px;
     color: #000;
     margin: 5px;
 }
 
 #rate-my-image {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.7);
     border-radius: 5px;
     padding:5px;
-    border: solid grey 3px;
+    border: solid #85C2C2 1px;
     color: #85C2C2;
     margin: 5px;
 }
 
 #photo-uploader {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.7);
     border-radius: 5px;
     padding:5px;
-    border: solid #2ce02c 3px;
+    border: solid #2ce02c 1px;
     color: #2ce02c;
 }
 
+.img-thumbnail {
+    padding: 0px;
+}
+
 .well {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.7);
     background-image: none; 
     color:white;
 }
